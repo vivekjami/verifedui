@@ -104,11 +104,11 @@ const Navbar = () => {
                 to={"/"}
               >
                 <div className="gap-y-6">
-                  <span className="flex  items-center">
+                  <span className="flex  items-center gap-1">
                     <img src={logo} alt="logo" height={70} width={70} />
                     VerifED
                   </span>
-                  <div className="w-[57%] ml-3 h-1 mt-2 bg-gray-300"></div>
+                  <div className="w-[57%] ml-8 h-1 mt-2 bg-gray-300"></div>
                 </div>
               </Link>
             </div>

@@ -4,6 +4,7 @@ import bgi from "../assets/background2.jpeg";
 import ChatBot from "../components/ChatBot";
 import shield from "../assets/Asset 1.svg";
 import Sidebar from "../components/Sidebar";
+import Loader from "../components/Loader";
 
 const Home = () => {
   // const [open, setOpen] = useState(false);
@@ -52,54 +53,12 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Our AI-Powered Solutions
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="feature-block text-center">
-              <h3 className="text-xl font-semibold">Exam Preparation</h3>
-              <p>
-                Facilitate comprehensive exam readiness through curated study
-                materials, interactive quizzes, and simulated practice tests.
-              </p>
-            </div>
-            <div className="feature-block text-center">
-              <h3 className="text-xl font-semibold">FAQ Handling</h3>
-              <p>
-                Provide authoritative responses to frequently asked questions
-                regarding exam protocols, procedures, and policies.
-              </p>
-            </div>
-            <div className="feature-block text-center">
-              <h3 className="text-xl font-semibold">Proctoring Support</h3>
-              <p>
-                Offer seamless technical assistance during remote proctoring
-                sessions to ensure smooth exam administration.
-              </p>
-            </div>
-            <div className="feature-block text-center">
-              <h3 className="text-xl font-semibold">Feedback Collection</h3>
-              <p>
-                Implement structured mechanisms to gather valuable candidate
-                feedback, fostering continuous improvement of services and
-                offerings.
-              </p>
-            </div>
-            <div className="feature-block text-center">
-              <h3 className="text-xl font-semibold">Training</h3>
-              <p>
-                Continuous training of AI models to improve accuracy and
-                relevance.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="py-16 ">
+        <div className="max-w-6xl mx-auto px-4"></div>
       </div>
 
       {/* Decentralization and Security Section */}
-      <div className="py-16 bg-gray-100">
+      <div className="py-16 ">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Decentralization and Security with ICP
@@ -123,9 +82,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Loader />
 
       {/* Innovation and Ethics Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Innovation and Ethical Considerations
@@ -150,7 +110,7 @@ const Home = () => {
       </div>
 
       {/* Advanced AI Features Section */}
-      <div className="py-16 bg-gray-100">
+      <div className="py-16">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">
             Advanced AI Features
@@ -196,7 +156,7 @@ const Home = () => {
       </div> */}
 
       {/* Call to Action Section */}
-      <div className="py-16 bg-white">
+      <div className="py-16 ">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">
             Ready to Transform Your Exam Experience with Decentralized AI?
