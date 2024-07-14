@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import PlugConnect from "@psychedelic/plug-connect";
 import worldid from "../assets/worldId-removebg-preview.png";
 import { stringify } from "querystring";
+import logo from "../assets/logo-removebg-preview.png";
 
 const Navbar = () => {
   const handleVerify = async (proof: ISuccessResult) => {
@@ -99,12 +100,15 @@ const Navbar = () => {
                 </ul>
               </div>
               <Link
-                className=" font-bold ml-2 text-5xl text-secondary w-[40vw] h-14"
+                className=" font-bold ml-2 text-4xl text-secondary w-[40vw] h-14"
                 to={"/"}
               >
                 <div className="gap-y-6">
-                  <span className="">VerifED</span>
-                  <div className="w-1/2 ml-1 h-1 mt-2 bg-neutral"></div>
+                  <span className="flex  items-center">
+                    <img src={logo} alt="logo" height={70} width={70} />
+                    VerifED
+                  </span>
+                  <div className="w-[57%] ml-3 h-1 mt-2 bg-gray-300"></div>
                 </div>
               </Link>
             </div>
