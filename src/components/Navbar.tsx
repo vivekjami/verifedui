@@ -9,6 +9,7 @@ import "@suiet/wallet-kit/style.css";
 import { Link } from "react-router-dom";
 import PlugConnect from "@psychedelic/plug-connect";
 import worldid from "../assets/worldId-removebg-preview.png";
+import { stringify } from "querystring";
 
 const Navbar = () => {
   const handleVerify = async (proof: ISuccessResult) => {
@@ -33,10 +34,30 @@ const Navbar = () => {
 
     window.location.href = "/dashboard";
   };
+  const handleConnect = () => {
+    try {
+      chrome.runtime.sendMessage(
+        "cfbfdhimifdmdehjmkdobpcjfefblkjm",
+        { message: "Hello from React!" },
+        (response) => {
+          if (chrome.runtime.lastError) {
+            console.error(
+              "Error sending message:",
+              chrome.runtime.lastError.message
+            );
+          } else {
+            console.log("Response from extension:", response);
+          }
+        }
+      );
+    } catch (error) {
+      console.error("Exception during message send:", error);
+    }
+  };
 
   return (
     <>
-      <div className="flex justify-center items- mt-9 absolute z-50 w-full ">
+      <div className="flex justify-center items- mt-12 absolute z-50 w-screen ">
         <div className=" w-[85%] ">
           <div className="navbar  rounded-3xl ">
             <div className="navbar-start">
@@ -78,7 +99,7 @@ const Navbar = () => {
                 </ul>
               </div>
               <Link
-                className=" font-bold ml-2 text-4xl text-secondary w-full h-14"
+                className=" font-bold ml-2 text-5xl text-secondary w-[40vw] h-14"
                 to={"/"}
               >
                 <div className="gap-y-6">
@@ -87,24 +108,26 @@ const Navbar = () => {
                 </div>
               </Link>
             </div>
-            {/* <div className="navbar-center hidden lg:flex">
-              <ul className="menu menu-horizontal px-1">
+            <div className="navbar-end  lg:flex justify-end gap-7 w-full ">
+              <ul className=" flex  px-1 gap-9 text-lg text-neutral mr-3">
                 <li>
-                  <Link to="/dashboard">Dashboard</Link>
+                  <Link to="/dashboard">Home</Link>
                 </li>
 
                 <li>
-                  <Link to="/leaderboard">LeaderBoard</Link>
+                  <Link to="/leaderboard">Service</Link>
                 </li>
                 <li>
                   <Link to="/about">About</Link>
                 </li>
               </ul>
-            </div> */}
-            <div className="navbar-end ">
-              {/* <a className="btn bg-blue-800">Connect Wallet</a> */}
 
-              <IDKitWidget
+              {/* <a className="btn bg-blue-800">Connect Wallet</a> */}
+              <button className="btn bg-none rounded-full px-8 border border-neutral">
+                Wallet
+              </button>
+              {/* <div>
+            <IDKitWidget
                 app_id="app_06dfaf6fb5f0b8ac58c10bf412238ffb" // obtained from the Developer Portal
                 action="wallet-connect" // obtained from the Developer Portal
                 onSuccess={onSuccess} // callback when the modal is closed
@@ -128,11 +151,18 @@ const Navbar = () => {
                   </button>
                 )}
               </IDKitWidget>
+
+              {}
+
               <PlugConnect
                 whitelist={["canister-id"]}
-                onConnectCallback={() => console.log("Some callback")}
+                onConnectCallback={handleConnect}
                 title="Connect"
+                debug={true}
+
+                // darkMode={true}
               />
+            </div> */}
 
               <div className=""></div>
             </div>

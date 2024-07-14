@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import bgi from "../assets/background2.jpeg";
 import ChatBot from "../components/ChatBot";
+import shield from "../assets/Asset 1.svg";
+import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   // const [open, setOpen] = useState(false);
@@ -13,29 +15,40 @@ const Home = () => {
       <div className=" ">
         <ChatBot />
       </div>
-      <div className="hero min-h-screen " style={{}}>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">
-              <span className="text-gray-700">Verif</span>
-              <span className="text-accent">Ed</span>
-            </h1>
-            <p className="mb-5 text-2xl feature-block font-semibold text-gray-700 ">
-              Powered by Internet Computer Protocol (ICP).
-            </p>
-            <button
-              className="btn btn-primary mr-4"
-              // onClick={() => {
-              //   setOpen(true);
-              // }}
+      <div className="hero bg-base-200 min-h-screen w-screen">
+        <div className="hero-content flex-col lg:flex-row-reverse w-full flex justify-evenly">
+          <div className="w-[60vw] flex justify-end mr-7">
+            <img
+              src={shield}
+              className="max-w-sm w-72"
+              style={{
+                width: "100%",
+                height: "100%",
+
+                transform: "rotateZ(-13deg)",
+              }}
+            />
+          </div>
+
+          <div className="w-[40vw]">
+            <h1
+              className="text-5xl font-medium text-secondary "
+              style={{
+                fontFamily: "BRLNSR",
+              }}
             >
-              Get Started
+              Engage.Innovate.Validate.
+            </h1>
+            <p className="py-6 text-xl font-semibold text-gray-300">
+              VerifED delivers AI-powered certification,offering an efficient
+              and robust solution for your needs.
+            </p>
+            <button className="border border-neutral p-3 bg-none rounded-full px-8 ml-4 ">
+              EXPLORE
             </button>
-            <Link to="/learn-more" className="btn btn-secondary">
-              Learn More
-            </Link>
           </div>
         </div>
+        <Sidebar />
       </div>
 
       {/* Features Section */}
