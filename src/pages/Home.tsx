@@ -5,6 +5,8 @@ import ChatBot from "../components/ChatBot";
 import shield from "../assets/Asset 1.svg";
 import Sidebar from "../components/Sidebar";
 import Loader from "../components/Loader";
+import Card from "../components/Home/Card";
+import img1 from "../assets/1 of 4.png";
 
 const Home = () => {
   // const [open, setOpen] = useState(false);
@@ -53,89 +55,92 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <div className="py-16 ">
-        <div className="max-w-6xl mx-auto px-4"></div>
-      </div>
 
       {/* Decentralization and Security Section */}
-      <div className="py-16 ">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
+      <div className="py-16 w-screen h-screen flex flex-col justify-around bg-base-300 ">
+        <div className="max-w-6xl mx-auto px-2">
+          <h2 className="text-3xl font-bold ">
             Decentralization and Security with ICP
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Decentralization</h3>
-              <p>
-                Leveraging the Internet Computer Protocol to ensure data
-                integrity and decentralized management of exam support and
-                certification processes.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Security</h3>
-              <p>
-                Ensuring secure and tamper-proof operations through robust
-                cryptographic measures.
-              </p>
-            </div>
+          <div>
+            {/* <p>
+              VerifED leverages the Internet Computer Protocol (ICP) to provide
+              a decentralized and secure environment for certifications and
+              assessments. ICP ensures that data is encrypted and stored on
+              multiple nodes, making it virtually impossible for unauthorized
+              access.
+            </p> */}
+          </div>
+        </div>
+        <div className="max-w-6xl mx-auto px-2">
+          <h2 className="text-3xl font-bold ">
+            Decentralization and Security with ICP
+          </h2>
+          <div>
+            {/* <p>
+              VerifED leverages the Internet Computer Protocol (ICP) to provide
+              a decentralized and secure environment for certifications and
+              assessments. ICP ensures that data is encrypted and stored on
+              multiple nodes, making it virtually impossible for unauthorized
+              access.
+            </p> */}
           </div>
         </div>
       </div>
       <Loader />
 
       {/* Innovation and Ethics Section */}
-      <div className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Innovation and Ethical Considerations
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Innovation</h3>
-              <p>
-                Leading the exploration of cutting-edge AI-driven solutions to
-                ensure the integrity and fairness of assessment practices.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Ethical Considerations</h3>
-              <p>
-                Addressing privacy and fairness concerns in testing environments
-                through meticulous implementation.
-              </p>
-            </div>
-          </div>
+      <div className=" h-screen w-screen  flex justify-center items-center ">
+        <div className=" flex justify-around  gap-7 border border-neutral p-14 rounded-3xl items-stretch  ">
+          <Card
+            imgUrl={img1}
+            Title="Exam Preparation"
+            description="Enchance exam readiness with curated study materials interative quizzez and practice tests"
+          />
+          <Card
+            imgUrl={img1}
+            Title="Proctoring Support"
+            description="Provide seamless technical support during remote proctoring for smooth exam administration "
+          />
+          <Card
+            imgUrl={img1}
+            Title="Feedback & training"
+            description="Implement feedback mechanisms for continuous improvement and AI training "
+          />
+          <Card
+            imgUrl={img1}
+            Title="FAQ Handling"
+            description="Offer authoritative FAQs on exam protocols and policies"
+          />
         </div>
       </div>
 
       {/* Advanced AI Features Section */}
       <div className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Advanced AI Features
+          <h2 className="text-3xl font-bold mb-12">
+            Leveraging Advanced AI Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">
-                Facial Movement Analysis
-              </h3>
-              <p>
-                Track and identify individuals by analyzing real-time facial
-                expressions and movements every 30 seconds.
-              </p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Eye Blink Recognition</h3>
-              <p>Validate identity through biometric eye blinking patterns.</p>
-            </div>
-            <div className="text-center">
-              <h3 className="text-xl font-semibold">Trustworthiness</h3>
-              <p>
-                Uphold the credibility and reliability of certifications and
-                assessments.
-              </p>
-            </div>
+          <div className=" flex justify-around  gap-7 border border-neutral p-14 rounded-[50px] items-stretch  ">
+            <Card
+              imgUrl={img1}
+              size={"200"}
+              Title="Exam Preparation"
+              description="Track and identify individual by analyzing realtime  facial expressions and movements
+              "
+            />
+            <Card
+              imgUrl={img1}
+              size={"200"}
+              Title="Proctoring Support"
+              description="Provide seamless technical support during remote proctoring for smooth exam administration "
+            />
+            <Card
+              imgUrl={img1}
+              size={"200"}
+              Title="Feedback & training"
+              description="Implement feedback mechanisms for continuous improvement and AI training "
+            />
           </div>
         </div>
       </div>
