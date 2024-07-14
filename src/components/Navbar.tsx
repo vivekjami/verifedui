@@ -88,11 +88,11 @@ const Navbar = () => {
                   className="menu menu-sm dropdown-content  mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <Link to="/">Home</Link>
                     {/* <a>Dashboard</a> */}
                   </li>
                   <li>
-                    <Link to="/leaderboard">LeaderBoard</Link>
+                    <Link to="/services">service</Link>
                   </li>
                   <li>
                     <Link to="/about">About</Link>
@@ -115,58 +115,81 @@ const Navbar = () => {
             <div className="navbar-end  lg:flex justify-end gap-7 w-full ">
               <ul className=" flex  px-1 gap-9 text-lg text-neutral mr-3">
                 <li>
-                  <Link to="/dashboard">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
 
                 <li>
-                  <Link to="/leaderboard">Service</Link>
+                  <Link to="/services">Service</Link>
                 </li>
                 <li>
                   <Link to="/about">About</Link>
                 </li>
               </ul>
 
-              {/* <a className="btn bg-blue-800">Connect Wallet</a> */}
-              <button className="btn bg-none rounded-full px-8 border border-neutral">
+              <button
+                className=" bg-none rounded-full px-9 border border-neutral py-2"
+                onClick={() =>
+                  (
+                    document.getElementById("my_modal_3") as HTMLDialogElement
+                  )?.showModal()
+                }
+              >
+                {" "}
                 Wallet
               </button>
-              <div>
-                <IDKitWidget
-                  app_id="app_06dfaf6fb5f0b8ac58c10bf412238ffb" // obtained from the Developer Portal
-                  action="wallet-connect" // obtained from the Developer Portal
-                  onSuccess={onSuccess} // callback when the modal is closed
-                  handleVerify={handleVerify} // callback when the proof is received
-                  verification_level={VerificationLevel.Device}
-                >
-                  {({ open }) => (
-                    // This is the button that will open the IDKit modal
-                    <button
-                      onClick={open}
-                      className="w-max mr-3 bg-white border-[3px] border-black rounded-xl flex justify-between items-center gap-4 px-1"
-                    >
-                      <img
-                        src={worldid}
-                        alt=""
-                        className=""
-                        height={35}
-                        width={35}
-                      />{" "}
-                      <p className="text font-semibold text-black">World ID</p>
+
+              <dialog id="my_modal_3" className="modal">
+                <div className="modal-box">
+                  <form method="dialog">
+                    {/* if there is a button in form, it will close the modal */}
+                    <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+                      ✕
                     </button>
-                  )}
-                </IDKitWidget>
+                  </form>
+                  <h3 className="font-semibold p-4 text-xl">Connect Wallet!</h3>
+                  <div className="flex  justify-evenly items-center p-8">
+                    <IDKitWidget
+                      app_id="app_06dfaf6fb5f0b8ac58c10bf412238ffb" // obtained from the Developer Portal
+                      action="wallet-connect" // obtained from the Developer Portal
+                      onSuccess={onSuccess} // callback when the modal is closed
+                      handleVerify={handleVerify} // callback when the proof is received
+                      verification_level={VerificationLevel.Device}
+                    >
+                      {({ open }) => (
+                        // This is the button that will open the IDKit modal
+                        <button
+                          onClick={open}
+                          className="w-max mr-3 bg-white border-[3px] border-black rounded-xl flex justify-between items-center gap-4 px-1"
+                        >
+                          <img
+                            src={worldid}
+                            alt=""
+                            className=""
+                            height={35}
+                            width={35}
+                          />{" "}
+                          <p className="text font-semibold text-black">
+                            World ID
+                          </p>
+                        </button>
+                      )}
+                    </IDKitWidget>
 
-                {}
+                    {}
 
-                <PlugConnect
-                  whitelist={["canister-id"]}
-                  onConnectCallback={handleConnect}
-                  title="Connect"
-                  debug={true}
+                    <PlugConnect
+                      whitelist={["canister-id"]}
+                      onConnectCallback={handleConnect}
+                      title="Connect"
+                      debug={true}
 
-                  // darkMode={true}
-                />
-              </div>
+                      // darkMode={true}
+                    />
+                  </div>
+                </div>
+              </dialog>
+
+              {/* <a className="btn bg-blue-800">Connect Wallet</a> */}
 
               <div className=""></div>
             </div>

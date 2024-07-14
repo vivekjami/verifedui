@@ -7,18 +7,24 @@ import Sidebar from "../components/Sidebar";
 import Loader from "../components/Loader";
 import Card from "../components/Home/Card";
 import img1 from "../assets/1 of 4.png";
+import img2 from "../assets/3 of 4.png";
+import img3 from "../assets/2 of 4.png";
+import img4 from "../assets/4 of 4.png";
+import loimg1 from "../assets/2of3.jpeg";
+import loimg2 from "../assets/3of3.jpeg";
+import loimg3 from "../assets/1of3.png";
 
 const Home = () => {
   // const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <div className="example">
       {/* Hero Section */}
 
       <div className=" ">
         <ChatBot />
       </div>
-      <div className="hero bg-base-200 min-h-screen w-screen">
+      <div className="hero bg-base-200 min-h-screen w-screen" id="intro0">
         <div className="hero-content flex-col lg:flex-row-reverse w-full flex justify-evenly">
           <div className="w-[60vw] flex justify-end mr-7">
             <img
@@ -57,7 +63,10 @@ const Home = () => {
       {/* Features Section */}
 
       {/* Decentralization and Security Section */}
-      <div className="py-16 w-screen h-screen flex flex-col justify-around bg-base-300 ">
+      <div
+        className="py-16 w-screen h-screen flex flex-col justify-around bg-base-300 "
+        id="intro1"
+      >
         <div className="max-w-6xl mx-auto px-2">
           <h2 className="text-3xl font-bold ">
             Decentralization and Security with ICP
@@ -87,28 +96,35 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <Loader />
+      {/* <Loader /> */}
 
       {/* Innovation and Ethics Section */}
-      <div className=" h-screen w-screen  flex justify-center items-center ">
+      <div
+        className=" h-screen w-screen  flex justify-center items-center "
+        id="intro2"
+      >
         <div className=" flex justify-around  gap-7 border border-neutral p-14 rounded-3xl items-stretch  ">
           <Card
             imgUrl={img1}
+            size="300"
             Title="Exam Preparation"
             description="Enchance exam readiness with curated study materials interative quizzez and practice tests"
           />
           <Card
-            imgUrl={img1}
+            imgUrl={loimg1}
+            size="300"
             Title="Proctoring Support"
             description="Provide seamless technical support during remote proctoring for smooth exam administration "
           />
           <Card
-            imgUrl={img1}
+            imgUrl={img3}
+            size="300"
             Title="Feedback & training"
             description="Implement feedback mechanisms for continuous improvement and AI training "
           />
           <Card
-            imgUrl={img1}
+            imgUrl={img4}
+            size="300"
             Title="FAQ Handling"
             description="Offer authoritative FAQs on exam protocols and policies"
           />
@@ -116,27 +132,27 @@ const Home = () => {
       </div>
 
       {/* Advanced AI Features Section */}
-      <div className="py-16">
+      <div className="py-16" id="intro3">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">
             Leveraging Advanced AI Features
           </h2>
           <div className=" flex justify-around  gap-7 border border-neutral p-14 rounded-[50px] items-stretch  ">
             <Card
-              imgUrl={img1}
+              imgUrl={img2}
               size={"200"}
               Title="Exam Preparation"
               description="Track and identify individual by analyzing realtime  facial expressions and movements
               "
             />
             <Card
-              imgUrl={img1}
+              imgUrl={loimg3}
               size={"200"}
               Title="Proctoring Support"
               description="Provide seamless technical support during remote proctoring for smooth exam administration "
             />
             <Card
-              imgUrl={img1}
+              imgUrl={loimg2}
               size={"200"}
               Title="Feedback & training"
               description="Implement feedback mechanisms for continuous improvement and AI training "
@@ -145,23 +161,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Testimonials Section
-      <div className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">What Our Users Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="text-center">
-              <p>"AI chat increased our candidate satisfaction by 30%!"</p>
-            </div>
-            <div className="text-center">
-              <p>"Query resolution time was halved with AI integration."</p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
-      {/* Call to Action Section */}
-      <div className="py-16 ">
+      <div className="py-16  " id="intro4">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-12">
             Ready to Transform Your Exam Experience with Decentralized AI?
