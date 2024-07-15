@@ -111,13 +111,13 @@ const Home = () => {
             description="Enchance exam readiness with curated study materials interative quizzez and practice tests"
           />
           <Card
-            imgUrl={loimg1}
+            imgUrl={img3}
             size="300"
             Title="Proctoring Support"
             description="Provide seamless technical support during remote proctoring for smooth exam administration "
           />
           <Card
-            imgUrl={img3}
+            imgUrl={img2}
             size="300"
             Title="Feedback & training"
             description="Implement feedback mechanisms for continuous improvement and AI training "
@@ -139,23 +139,20 @@ const Home = () => {
           </h2>
           <div className=" flex justify-around  gap-7 border border-neutral p-14 rounded-[50px] items-stretch  ">
             <Card
-              imgUrl={img2}
+              imgUrl={loimg3}
               size={"200"}
-              Title="Exam Preparation"
               description="Track and identify individual by analyzing realtime  facial expressions and movements
               "
             />
             <Card
-              imgUrl={loimg3}
-              size={"200"}
-              Title="Proctoring Support"
-              description="Provide seamless technical support during remote proctoring for smooth exam administration "
-            />
-            <Card
               imgUrl={loimg2}
               size={"200"}
-              Title="Feedback & training"
-              description="Implement feedback mechanisms for continuous improvement and AI training "
+              description="Ensure credibility and reliablility of examinations and assessments"
+            />
+            <Card
+              imgUrl={loimg1}
+              size={"200"}
+              description="Validate identity through biometric eye-blinking patterns"
             />
           </div>
         </div>

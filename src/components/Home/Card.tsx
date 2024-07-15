@@ -7,7 +7,7 @@ const Card = ({
   size,
 }: {
   imgUrl: string;
-  Title: string;
+  Title?: string;
   description: string;
   size?: string;
 }) => {

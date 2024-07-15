@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 
 import toast, { Toaster } from "react-hot-toast";
 import data from "../move_que.json";
-import icp from "../que.json";
+import icp from "../icp.json";
 import { useParams } from "react-router-dom";
 import VideoCapture from "../components/Proctoring/VideoCapture";
 
