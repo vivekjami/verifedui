@@ -16,6 +16,7 @@ interface TestResult {
   lookingAwayCount: number;
   possiblePhotoDetections: number;
   overallRisk: string;
+  score: number;
 }
 
 function formatDateTime(date: any) {
@@ -65,6 +66,7 @@ function Quiz() {
     lookingAwayCount: 0,
     possiblePhotoDetections: 0,
     overallRisk: "",
+    score: 0,
   });
   //   const quizId : any = SearchParams.get('id')
   //   const quizName : any = SearchParams.get('name')
